@@ -1,0 +1,388 @@
+{
+	"id": "25b33fae-e070-4390-814c-26f5031a413c",
+	"name": "DemoShopping",
+	"timestamp": "2024-06-01T05:56:18.753Z",
+	"collection_id": "35180863-cc596f8e-c871-4147-ac98-f087a8f2d670",
+	"folder_id": "35180863-68017289-dd42-49bc-b287-f61f68e9902f",
+	"environment_id": "35180863-112f182e-e413-428d-a2e1-739ec303fdc1",
+	"totalPass": 35,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-01T05:56:16.895Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "e5e1f947-720b-4913-b576-a765b78a60eb",
+			"name": "Получение списка всех товаров",
+			"url": "https://qa.demoshopping.ru/products",
+			"time": 393,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false,
+				"Все продукты содержат product_id, name, description, price, category, manufacturer, imageUrl, freeShipping": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Все продукты содержат product_id, name, description, price, category, manufacturer, imageUrl, freeShipping": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				393
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false,
+					"Все продукты содержат product_id, name, description, price, category, manufacturer, imageUrl, freeShipping": true
+				}
+			]
+		},
+		{
+			"id": "fdf6e519-9a9f-4150-87d8-f11a27fb69ea",
+			"name": "Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 110,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Данные о товаре сохранены в переменную": true,
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Поле 'name' имеет тип данных 'string'": true,
+				"Поле 'price' имеет тип данных 'number'": true,
+				"Поле 'description' имеет тип данных 'string'": true,
+				"Поле 'category' имеет тип данных 'string'": true,
+				"Поле 'manufacturer' имеет тип данных 'string'": true,
+				"Поле 'freeShipping' имеет тип данных 'string'": true,
+				"ID продукта сохранен в переменную": true
+			},
+			"testPassFailCounts": {
+				"Данные о товаре сохранены в переменную": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'name' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'price' имеет тип данных 'number'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'description' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'category' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'manufacturer' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'freeShipping' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID продукта сохранен в переменную": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				110
+			],
+			"allTests": [
+				{
+					"Данные о товаре сохранены в переменную": true,
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Поле 'name' имеет тип данных 'string'": true,
+					"Поле 'price' имеет тип данных 'number'": true,
+					"Поле 'description' имеет тип данных 'string'": true,
+					"Поле 'category' имеет тип данных 'string'": true,
+					"Поле 'manufacturer' имеет тип данных 'string'": true,
+					"Поле 'freeShipping' имеет тип данных 'string'": true,
+					"ID продукта сохранен в переменную": true
+				}
+			]
+		},
+		{
+			"id": "0d4d0258-35c2-435c-a170-0253fdfd8dca",
+			"name": "Поиск товара по существующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/18095",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Для продукта отображается product_id, name, description, price, category, manufacturer, imageUrl, freeShipping": true,
+				"ID продукта в ответе соответствует запрашиваемому {{id}}": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Для продукта отображается product_id, name, description, price, category, manufacturer, imageUrl, freeShipping": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID продукта в ответе соответствует запрашиваемому {{id}}": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Для продукта отображается product_id, name, description, price, category, manufacturer, imageUrl, freeShipping": true,
+					"ID продукта в ответе соответствует запрашиваемому {{id}}": true
+				}
+			]
+		},
+		{
+			"id": "7864ef2d-b11a-452f-bc99-426c98a2bf6c",
+			"name": "Полное обновление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/18095",
+			"time": 167,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Поле 'name' имеет тип данных 'string'": true,
+				"Поле 'price' имеет тип данных 'number'": true,
+				"Поле 'description' имеет тип данных 'string'": true,
+				"Поле 'category' имеет тип данных 'string'": true,
+				"Поле 'manufacturer' имеет тип данных 'string'": true,
+				"Поле 'freeShipping' имеет тип данных 'string'": true,
+				"Информация о продукте была обновлена": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'name' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'price' имеет тип данных 'number'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'description' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'category' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'manufacturer' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'freeShipping' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Информация о продукте была обновлена": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				167
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Поле 'name' имеет тип данных 'string'": true,
+					"Поле 'price' имеет тип данных 'number'": true,
+					"Поле 'description' имеет тип данных 'string'": true,
+					"Поле 'category' имеет тип данных 'string'": true,
+					"Поле 'manufacturer' имеет тип данных 'string'": true,
+					"Поле 'freeShipping' имеет тип данных 'string'": true,
+					"Информация о продукте была обновлена": true
+				}
+			]
+		},
+		{
+			"id": "4bd37fec-a91e-4b74-ba4c-7795a05ea108",
+			"name": "Частичное обновление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/18095",
+			"time": 163,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Поле 'name' имеет тип данных 'string'": true,
+				"Поле 'price' имеет тип данных 'number'": true,
+				"Поле 'description' имеет тип данных 'string'": true,
+				"Поле 'freeShipping' имеет тип данных 'string'": true,
+				"Информация о продукте была обновлена": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'name' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'price' имеет тип данных 'number'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'description' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Поле 'freeShipping' имеет тип данных 'string'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Информация о продукте была обновлена": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Поле 'name' имеет тип данных 'string'": true,
+					"Поле 'price' имеет тип данных 'number'": true,
+					"Поле 'description' имеет тип данных 'string'": true,
+					"Поле 'freeShipping' имеет тип данных 'string'": true,
+					"Информация о продукте была обновлена": true
+				}
+			]
+		},
+		{
+			"id": "2e482875-4e60-4acc-acda-44f75a032f32",
+			"name": "Удаление товара по существующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/18095",
+			"time": 146,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Продукт удален из системы": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Продукт удален из системы": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				146
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Продукт удален из системы": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1024,
+	"collection": {
+		"requests": [
+			{
+				"id": "e5e1f947-720b-4913-b576-a765b78a60eb",
+				"method": "GET"
+			},
+			{
+				"id": "fdf6e519-9a9f-4150-87d8-f11a27fb69ea",
+				"method": "POST"
+			},
+			{
+				"id": "0d4d0258-35c2-435c-a170-0253fdfd8dca",
+				"method": "GET"
+			},
+			{
+				"id": "7864ef2d-b11a-452f-bc99-426c98a2bf6c",
+				"method": "PUT"
+			},
+			{
+				"id": "4bd37fec-a91e-4b74-ba4c-7795a05ea108",
+				"method": "PATCH"
+			},
+			{
+				"id": "2e482875-4e60-4acc-acda-44f75a032f32",
+				"method": "DELETE"
+			}
+		]
+	}
+}
